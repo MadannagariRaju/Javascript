@@ -30,7 +30,7 @@ console.log(Object.values(obj))
 let Values = Object.values(obj)
 console.log(Values);
 for(let value in Values) {
-    console.log(Values[value]);Ma
+    console.log(Values[value]);
 }
 
 
@@ -45,6 +45,44 @@ for(let i in Entries) {
         console.log(Entries[i[j]]);
     }
 }
+
+// object clone
+
+let o1={};
+let o2={
+    name:"raju",
+    age:22
+}
+let combined = {...o1,...o2}
+console.log(combined)
+
+
+let a =Object.assign(o1,o2);
+console.log(a);
+console.log(o1);
+
+
+// Object freeze  -> This method freezes an object, preventing new properties from being added and existing properties from being removed or modified.
+
+let egobj ={
+    name: "raju",
+    age: 22
+}
+Object.freeze(egobj)
+egobj.name = "Raju ";
+console.log(egobj.name);
+
+// Object seal -> This method seals an object, preventing new properties from being added, but allows existing properties to be modified.
+
+let egobj2 ={
+    name: "raju",
+    age: 22
+}
+Object.seal(egobj2);
+egobj2.name = "Raju";
+egobj2.city = "hyd";
+console.log(egobj2);
+
 
 let obj2 = new Object();
 
