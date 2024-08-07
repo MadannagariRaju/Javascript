@@ -30,7 +30,7 @@ console.log(Object.values(obj))
 let Values = Object.values(obj)
 console.log(Values);
 for(let value in Values) {
-    console.log(Values[value]);
+    console.log(Values[value]);Ma
 }
 
 
