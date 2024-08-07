@@ -6,6 +6,10 @@ let obj = {
     job: null
 }
 
+//typeof operator
+
+console.log(typeof (obj))
+
 obj['name'] = "Raju"
 obj.name = "raju"
 console.log(obj['name']);
