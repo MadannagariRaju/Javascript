@@ -3,21 +3,25 @@ const prompt = require('prompt-sync')()
 let min = 1;
 let max = 100;
 let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-let score=0;
+let count=0;
 while(true) {
-    let n = prompt("enter your number")
+    let n = prompt("enter a number between 1 - 100:  ")
     if(n == randomNumber) {
-        score++;
-        console.log("your score: ",100-score)
+        count++;
+        console.log("Number of Guesses ", count)
+        console.log("Hurrah!!");
+        console.log("your score: ",100-count)
         break;
     }
-    else if( n<randomNumber) {
+    else if( n<randomNumber && n<=100) {
         console.log("number is lower than random number")
-        score++;
+        count++;
     }
-    else if(n>randomNumber) {
+    else if(n>randomNumber && n<=100) {
         console.log("number is higher than random number")
-        score++;
+        count++;
+    }else {
+        console.log("please enter number between 1 -100")
     }
-    console.log("Score ", score)
+    console.log("Number of Guesses ", count)
 }
