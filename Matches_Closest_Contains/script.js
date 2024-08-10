@@ -11,6 +11,12 @@ let id1 = document.getElementById('id1')
 let cont = document.getElementsByClassName('container')[0]
 console.log(id1)
 
+// matches explained with example
+
+//<h1 class="box" id="id1">Hello , Iam Robot</h1>
+// h1.matches("box") -> element.matches("css")
+// we need to get element by dom searching methods discussed below
+
 console.log(id1.matches('.raju')) // false because  <h1 class="box" id="id1">Hello , Iam Robot</h1> here class is 'box'
 console.log(id1.matches('.box'))
 
