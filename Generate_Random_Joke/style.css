@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+center{
+    color: white;
+    font-size: 30px;
+    font-weight: 60px;
+}
+
+#desc{
+    color: aqua;
+}
+
+#btn{
+    padding: 10px;
+    background-color: rgb(233, 220, 229);
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+
+}
+
