@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #0f0d0d;
+}
+
+.bulb {
+    position: relative;
+    width: 100px;
+    height: 150px;
+}
+
+.bulb-glow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100px;
+    height: 120px;
+    background: radial-gradient(circle at center, #fff 30%, #ffcc00 70%);
+    border-radius: 50% 50% 0 0;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+}
+
+.bulb-base {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    height: 40px;
+    background: #333;
+    border-radius: 0 0 30px 30px;
+    transform: translateX(-50%);
+}
+
+.bulb-glow.off {
+    background: radial-gradient(circle at center, #2a2828 30%, #171717 70%);
+    box-shadow: 0 0 10px rgba(23, 23, 23, 0.5);
+}
