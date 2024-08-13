@@ -30,5 +30,4 @@ function x(){
     }
 }
 
-
 bele.addEventListener('click',x)
