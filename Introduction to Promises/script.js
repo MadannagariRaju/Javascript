@@ -172,29 +172,33 @@
 // 5.Promise.resolve(value) -> Makes a resolved promise with the given value.
 // 6.Promise.reject(error) -> Makes a rejected promises with the given error
 
-let p1 = new Promise((resolve,reject)=>{
-    setTimeout(function(){
-        console.log("value 1");
-        // resolve(1);
-        reject(new Error("Iam a new Error"))
 
-    },1000)
-})
 
-let p2 = new Promise((resolve,reject)=>{
-    setTimeout(function(){
-        console.log("value 2");
-        // resolve(2);
-        reject(new Error("Iam a new Error"))
-    },2000)
-})
+// let p1 = new Promise((resolve,reject)=>{
+//     setTimeout(function(){
+//         console.log("value 1");
+//         // resolve(1);
+//         reject(new Error("Iam a new Error"))
 
-let p3 = new Promise((resolve,reject)=>{
-    setTimeout(function(){
-        console.log("value 3");
-        resolve(3);
-    },3000)
-})
+//     },1000)
+// })
+
+// let p2 = new Promise((resolve,reject)=>{
+//     setTimeout(function(){
+//         console.log("value 2");
+//         // resolve(2);
+//         reject(new Error("Iam a new Error"))
+//     },2000)
+// })
+
+// let p3 = new Promise((resolve,reject)=>{
+//     setTimeout(function(){
+//         console.log("value 3");
+//         resolve(3);
+//     },3000)
+// })
+
+
 
 // p1.then((value)=>{
 //     console.log(value);
@@ -212,9 +216,44 @@ let p3 = new Promise((resolve,reject)=>{
 // let promises_all = Promise.all([p1,p2,p3])
 // let promises_all = Promise.allSettled([p1,p2,p3])
 // let promises_all = Promise.race([p1,p2,p3])
-let promises_all = Promise.any([p1,p2,p3])
-promises_all.then((value)=>{
-    console.log(value)
-})
+// let promises_all = Promise.any([p1,p2,p3])
+// promises_all.then((value)=>{
+//     console.log(value)
+// })
 
 
+// async and await
+
+// There is a special syntax to work with promise in javascript
+// A function can be made async by using async keyword
+// An async function always returns a promise , other values are wrapped in a promise automatically
+
+
+
+async function harry(){
+    let p1= new Promise((resovle,reject) =>{
+        setTimeout(function(){
+            resovle(12);
+        },5000)
+    })
+
+    let p2= new Promise((resolve,reject)=>{
+        setTimeout(function(){
+            resolve(25);
+        },3000)
+    })
+    let pa1= await p1.then((value)=>{console.log(value)})
+    let pa2= await p2.then((value)=>{console.log(value)})
+}
+
+const hi =()=>{
+    console.log("hi all")
+}
+
+async function cherry(){
+    let ans = await harry();
+    hi();
+    console.log(ans)
+}
+
+cherry()
