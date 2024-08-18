@@ -41,7 +41,7 @@ function greet(error,src) {
     }
     console.log("script loaded with src ",src);
 }
-loadscript('https://cd.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',greet)
+loadscript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',greet)
 
 
 
