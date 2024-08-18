@@ -1,4 +1,4 @@
-
+/*
 let win =0;
 let check= true;
 let totalmatches =1;
@@ -44,4 +44,7 @@ while(check) {
     if(check) totalmatches++;
 }
 
-alert(`you win ${win} out of ${totalmatches}`)
+alert(`you win ${win} out of ${totalmatches}`)  */
+
+
+
