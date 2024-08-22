@@ -93,3 +93,17 @@ const handlepincode = (event)=>{
     list.innerHTML = inhtml;
   })
 }
+
+
+// 2Q
+
+
+
+// let a = prompt("enter your note");
+// localStorage.setItem('note',a);
+
+// let b= confirm("do you want to delete note")
+// if(b){
+//   localStorage.removeItem('note')
+//   alert("note deleted")
+// }
