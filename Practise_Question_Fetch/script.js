@@ -47,11 +47,11 @@ const handleinput = (event) => {
         // console.log(inhtml); // Log the final HTML string
         const postoffice = document.getElementById("postoffice");
         postoffice.innerHTML = inhtml;
-        city1="";
+        // document.getElementsByTagName('input')[0].value="";
 
     }).catch((ele)=>{
       alert("enter valid city name  ", ele)
-      city1="";
+      document.getElementsByTagName('input')[0].value="";
     })
 };
 
@@ -67,6 +67,9 @@ const handlepincode = (event)=>{
   let url = `https://api.postalpincode.in/pincode/${pincode}`;
   let res = fetch(url);
   res.then((value)=>{
+    if(value === null){
+      throw new Error()
+    }
     return value.json();
   }).then((city)=>{
     let arr = city[0].PostOffice
@@ -88,9 +91,13 @@ const handlepincode = (event)=>{
             </div>
           </div>
         `;
-    }
+    } 
     console.log(arr)
     list.innerHTML = inhtml;
+    // document.querySelector(".input1").value = '';
+  }).catch((err)=>{
+    alert("Please enter valid pincode")
+    document.querySelector(".input1").value = '';
   })
 }
 
