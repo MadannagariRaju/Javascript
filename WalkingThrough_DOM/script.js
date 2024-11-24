@@ -9,7 +9,9 @@
 
 // Accessing Children
 
-console.log(document.head.childNodes)
+console.log(document.head.childNodes) // childNodes will gives you NodeList, it is not same as array , inorder to convert it to array, you need to this
+
+let arr = Arrays.from(document.head.childNodes); // now you can apply all array methods on arr
 
 
 console.log("first child inside body tage",document.body.firstChild) // if there is space between head and body tag then it is considered as firstchild
@@ -52,8 +54,8 @@ console.log(document.body.getElementsByTagName("div")[1].parentNode)
 console.log(document.body.getElementsByTagName("h1")[1].parentNode)   // here five h1 in div so its parent is div
 console.log(document.body.getElementsByTagName("h1")[8].parentNode)
 
-console.log(document.body.parentNode)
-console.log(document.body.parentElement)
+console.log(document.body.parentNode) // gives you textnode or html element
+console.log(document.body.parentElement) // gives you a valid html
 
 
 // Element only Navigation
